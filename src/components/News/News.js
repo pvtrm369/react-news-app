@@ -11,7 +11,7 @@ import { endpointPath } from "../../config/api";
 import { Container, Header, card } from "./index";
 
 function News(props) {
-  const { newscategory, country } = props;
+  const { newscategory, country,updateQuery,updateAssistant } = props;
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -63,6 +63,8 @@ function News(props) {
                         element.image === null ? NullImage : element.image
                       }
                       urlNews={element.url}
+                      updateQuery={updateQuery} 
+                      updateAssistant={updateAssistant}
                     />
                   </Col>
                 );
@@ -83,6 +85,8 @@ News.defaultProps = {
 News.propTypes = {
   country: PropTypes.string,
   newscategory: PropTypes.string,
+  updateQuery: PropTypes.func.isRequired,
+  updateAssistant:PropTypes.func.isRequired,
 };
 
 export default News;

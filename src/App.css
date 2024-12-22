@@ -1,0 +1,17 @@
+.toggle-assistant-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 60px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 200px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .toggle-assistant-btn:hover {
+    background-color: #0056b3;
+  }
+  

@@ -9,12 +9,16 @@ import { useParams } from "react-router-dom";
 import { Col, Row } from "react-bootstrap";
 import { header, noFound, searching } from "../../config/config";
 import { Container, Header, card } from "./index";
+import PropTypes from "prop-types";
 
-function Search() {
+
+function Search(props) {
   const [searchQuery, setSearchQuery] = useState("");
   const [totalArticles, setTotalArticle] = useState(0);
   const { articles, loading } = useSelector((state) => state.search);
   const { query } = useParams();
+  const {  updateQuery,updateAssistant } = props;
+
 
   const dispatch = useDispatch();
 
@@ -63,6 +67,8 @@ function Search() {
                         element.image === null ? NullImage : element.image
                       }
                       urlNews={element.url}
+                      updateQuery={updateQuery} 
+                      updateAssistant={updateAssistant}
                     />
                   </Col>
                 );
@@ -74,5 +80,11 @@ function Search() {
     </>
   );
 }
+Search.propTypes={
+  updateQuery: PropTypes.func.isRequired,
+  updateAssistant:PropTypes.func.isRequired,
+
+};
+
 
 export default Search;

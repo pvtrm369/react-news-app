@@ -1,9 +1,15 @@
 .card {
     border-radius: 15px !important;
-    background-color: rgb(41, 47, 51) !important;
+    background-color: #2E236C !important;
     box-shadow: 0px 3px 12px 0px #0000002b !important;
     color: #fff !important;
     transition: transform 0.4s ease !important;
+    width: 275px;     /* Fixed card width */
+    height: 490px;   /* Fixed card height */
+    display: flex;
+    /* flex-direction: column; /* Arrange content vertically */
+    /* overflow: hidden; Prevent content overflow */ 
+    /* margin-right:; */
 }
 
 .card:hover {
@@ -14,12 +20,37 @@
     border-top-left-radius: 15px !important;
     border-top-right-radius: 15px !important;
     object-fit: cover !important;
-    width: 100% !important;
-    height: 230px !important;
+    width: 100%; /* Stretch image to card width */
+    height: 200px; /* Fixed height for the image */
+}
+
+.card-body {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute content evenly */
+    flex-grow: 1; /* Make it fill the remaining space */
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* Keep title in one line */
 }
 
 .card-description {
     color: #b6b4b4 !important;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    /* -webkit-line-clamp: 3; Limit to 3 lines */
+    -webkit-box-orient: vertical;
 }
 
 .card-btn {
@@ -29,12 +60,12 @@
     color: white !important;
     border-color: #323762b7 !important;
     padding: 9px 17px !important;
-    background-color: #005abb !important;
+    background-color: #17153B !important;
     transition: 0.5s ease !important;
 }
 
 .card-btn:hover {
-    background-color: rgb(9 71 137) !important;
+    background-color: #3542d1 !important;
 }
 
 .arrow-icon {
@@ -45,4 +76,21 @@
 
 .card-btn:hover .arrow-icon {
     transform: translateX(5px);
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.button button {
+    border: none;
+    border-radius: 15px;
+    padding: 9px 17px;
+    font-weight: bold;
+    background-color: #17153B;
+}
+
+.button button:hover {
+    background-color: #3542d1;
 }

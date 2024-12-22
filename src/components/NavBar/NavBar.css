@@ -1,5 +1,5 @@
 .navbar {
-  background-color: rgb(41, 47, 51) !important;
+  background-color: #2E236C!important;
   padding: 20px !important;
   font-size: 18px !important;
 }
@@ -43,7 +43,7 @@
   margin-left: 13px !important;
   margin-right: -9px !important;
   font-size: 18px !important;
-  background-color: #31383e !important;
+  background-color:#C8ACD6 !important;
   color: #fff !important;
   border: 0 !important;
   outline: 0 !important;
@@ -58,7 +58,7 @@
 }
 
 .search-btn {
-  background-color: #005abb !important;
+  background-color: #17153B !important;
   color: white !important;
   font-weight: 700 !important;
   border-radius: 0 !important;
@@ -76,5 +76,8 @@
 }
 
 .search-btn:disabled {
-  background-color: #005abb !important;
+  background-color: #433D8B !important;
+}
+.search-form button{
+  background-color: #433D8B;
 }

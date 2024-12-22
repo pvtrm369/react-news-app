@@ -7,6 +7,7 @@ import { v4 as uuidv4 } from "uuid";
 import { navbarBrand, navs } from "../../config/config";
 import logoImage from "../Images/logoImage.png";
 import "../NavBar/NavBar.css";
+import SearchIcon from '@mui/icons-material/Search';
 
 function NavBar() {
   const navigate = useNavigate();
@@ -82,7 +83,7 @@ function NavBar() {
               onClick={handleSubmit}
               disabled={isSearchButtonDisabled}
             >
-              Search
+              <SearchIcon/>
             </Button>
           </Form>
         </Navbar.Collapse>
